@@ -68,3 +68,9 @@
 // function repeatStr(n, s) {
 // 	return s.repeat(n);
 // }
+//                              Zadanie 5
+// Given an array of integers, return a new array with each value doubled.
+
+// function maps(x) {
+// 	return x.map((num) => num * 2);
+// }
