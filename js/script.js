@@ -93,11 +93,28 @@
 // Even or Odd Check
 // Create a function that takes a number as input and checks whether the number is even or odd. Return the string "even number" for even numbers and "odd number" for odd numbers.
 
-const isEven = (num) => {
-	if (num % 2 === 0) {
-		return "even number";
-	} else {
-		return "odd number";
+// const isEven = (num) => {
+// 	if (num % 2 === 0) {
+// 		return "even number";
+// 	} else {
+// 		return "odd number";
+// 	}
+// };
+// isEven();
+//                              Zadanie 8
+// Number Comparison
+// Write a function that checks a number and returns whether it is:
+
+// Equal to zero,
+// Greater than zero,
+// Less than zero.
+const checkNumber = (num) => {
+	if (num === 0) {
+		return "number equal to 0";
+	} else if (num > 0) {
+		return "greater than 0";
+	} else if (num < 0) {
+		return "less than zero";
 	}
 };
-isEven();
+checkNumber();
