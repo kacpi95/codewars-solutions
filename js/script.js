@@ -108,13 +108,39 @@
 // Equal to zero,
 // Greater than zero,
 // Less than zero.
-const checkNumber = (num) => {
-	if (num === 0) {
-		return "number equal to 0";
-	} else if (num > 0) {
-		return "greater than 0";
-	} else if (num < 0) {
-		return "less than zero";
+// const checkNumber = (num) => {
+// 	if (num === 0) {
+// 		return "number equal to 0";
+// 	} else if (num > 0) {
+// 		return "greater than 0";
+// 	} else if (num < 0) {
+// 		return "less than zero";
+// 	}
+// };
+// checkNumber();
+//                          Zadanie 9
+// Simple Calculator
+// Create a calculator function that takes two numbers and an operator (+, -, *, /). The function should return the result of the operation based on the operator. If the operator is invalid or division by zero is attempted, return an appropriate error message.
+const calculator = (a, b, operator) => {
+	switch (operator) {
+		case "+":
+			return `${a + b} `;
+			break;
+		case "-":
+			return `${a - b}`;
+			break;
+		case "*":
+			return `${a * b}`;
+			break;
+		case "/":
+			if (b !== 0) {
+				return `${a / b}`;
+			} else {
+				return "you can't divide by 0";
+			}
+			break;
+		default:
+			return "unknown operator";
 	}
 };
-checkNumber();
+calculator();
