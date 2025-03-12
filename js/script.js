@@ -151,14 +151,21 @@
 // Prints "FizzBuzz" for numbers divisible by both 3 and 5.
 // Prints the number itself if it’s not divisible by 3 or 5.
 
-for (let i = 0; i <= 50; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log('FizzBuzz');
-  } else if (i % 5 === 0) {
-    console.log('Buzz');
-  } else if (i % 3 === 0) {
-    console.log('Fizz');
-  } else {
-    console.log(i);
-  }
-}
+// for (let i = 0; i <= 50; i++) {
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log('FizzBuzz');
+//   } else if (i % 5 === 0) {
+//     console.log('Buzz');
+//   } else if (i % 3 === 0) {
+//     console.log('Fizz');
+//   } else {
+//     console.log(i);
+//   }
+// }
+//
+//    Zadanie 11
+// Write a JavaScript function that takes a number as input and returns the number reversed.
+// let NumbersOne = [1, 2, 3, 4, 5, 6];
+// let NumbersTwo = [5, 4, 3, 2, 1];
+// const reverseNumbers = NumbersOne.reverse();
+// console.log(reverseNumbers);
