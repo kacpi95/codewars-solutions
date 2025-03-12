@@ -28,7 +28,7 @@
 // }
 // getGrade(10, 10, 10);
 
-//                              Zadanie 2
+//    Zadanie 2
 // There was a test in your class and you passed it. Congratulations!
 
 // But you're an ambitious person. You want to know if you're better than the average student in your class.
@@ -51,7 +51,7 @@
 // 		return false;
 // 	}
 // }
-//                                 Zadanie 3
+//    Zadanie 3
 // Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
 
 // Example:
@@ -62,19 +62,19 @@
 // function removeEveryOther(arr) {
 // 	return arr.filter((element, index) => index % 2 === 0);
 // }
-//                              Zadanie 4
+//    Zadanie 4
 // Write a function that accepts a non-negative integer n and a string s as parameters, and returns a string of s repeated exactly n times.
 
 // function repeatStr(n, s) {
 // 	return s.repeat(n);
 // }
-//                              Zadanie 5
+//    Zadanie 5
 // Given an array of integers, return a new array with each value doubled.
 
 // function maps(x) {
 // 	return x.map((num) => num * 2);
 // }
-//                              Zadanie 6
+//    Zadanie 6
 // Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
 
 // For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
@@ -89,7 +89,7 @@
 // 		return 4;
 // 	}
 // };
-//                      Zadanie 7
+//    Zadanie 7
 // Even or Odd Check
 // Create a function that takes a number as input and checks whether the number is even or odd. Return the string "even number" for even numbers and "odd number" for odd numbers.
 
@@ -101,7 +101,7 @@
 // 	}
 // };
 // isEven();
-//                              Zadanie 8
+//    Zadanie 8
 // Number Comparison
 // Write a function that checks a number and returns whether it is:
 
@@ -118,29 +118,47 @@
 // 	}
 // };
 // checkNumber();
-//                          Zadanie 9
+//    Zadanie 9
 // Simple Calculator
 // Create a calculator function that takes two numbers and an operator (+, -, *, /). The function should return the result of the operation based on the operator. If the operator is invalid or division by zero is attempted, return an appropriate error message.
-const calculator = (a, b, operator) => {
-	switch (operator) {
-		case "+":
-			return `${a + b} `;
-			break;
-		case "-":
-			return `${a - b}`;
-			break;
-		case "*":
-			return `${a * b}`;
-			break;
-		case "/":
-			if (b !== 0) {
-				return `${a / b}`;
-			} else {
-				return "you can't divide by 0";
-			}
-			break;
-		default:
-			return "unknown operator";
-	}
-};
-calculator();
+// const calculator = (a, b, operator) => {
+// 	switch (operator) {
+// 		case "+":
+// 			return `${a + b} `;
+// 			break;
+// 		case "-":
+// 			return `${a - b}`;
+// 			break;
+// 		case "*":
+// 			return `${a * b}`;
+// 			break;
+// 		case "/":
+// 			if (b !== 0) {
+// 				return `${a / b}`;
+// 			} else {
+// 				return "you can't divide by 0";
+// 			}
+// 			break;
+// 		default:
+// 			return "unknown operator";
+// 	}
+// };
+// calculator();
+//    Zadanie 10
+// //Write a JavaScript program that iterates from 1 to 50 and:
+// Prints "Fizz" for numbers divisible by 3.
+// Prints "Buzz" for numbers divisible by 5.
+// Prints "FizzBuzz" for numbers divisible by both 3 and 5.
+// Prints the number itself if it’s not divisible by 3 or 5.
+
+for (let i = 0; i <= 50; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz');
+  } else if (i % 5 === 0) {
+    console.log('Buzz');
+  } else if (i % 3 === 0) {
+    console.log('Fizz');
+  } else {
+    console.log(i);
+  }
+}
