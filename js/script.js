@@ -176,13 +176,30 @@
 // model (model),
 // year (manufacturing year),
 // color (color).
-const car = {
-  brand: 'bmw',
-  model: 'x5',
-  year: 2020,
-  color: 'black',
-  getInfo: function () {
-    return `${this.brand} ${this.model} ${this.year} ${this.color}`;
+// const car = {
+//   brand: 'bmw',
+//   model: 'x5',
+//   year: 2020,
+//   color: 'black',
+//   getInfo: function () {
+//     return `${this.brand} ${this.model} ${this.year} ${this.color}`;
+//   },
+// };
+// console.log(car.getInfo());
+
+//    Zadanie 13
+// Create an object person that contains:
+// firstName (first name),
+// lastName (last name),
+// age (age),
+// greet() – a method that prints a greeting, e.g., "Hi, my name is [firstName] [lastName] and I am [age] years old."
+// Call the greet() method on the person object.
+const person = {
+  firstname: 'kacper',
+  lastName: 'Nowak',
+  age: 20,
+  greet: function () {
+    return `Hello my name is ${this.firstname} ${this.lastName} I am ${this.age} years old`;
   },
 };
-console.log(car.getInfo());
+console.log(person.greet());
