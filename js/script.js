@@ -194,12 +194,29 @@
 // age (age),
 // greet() – a method that prints a greeting, e.g., "Hi, my name is [firstName] [lastName] and I am [age] years old."
 // Call the greet() method on the person object.
-const person = {
-  firstname: 'kacper',
-  lastName: 'Nowak',
-  age: 20,
-  greet: function () {
-    return `Hello my name is ${this.firstname} ${this.lastName} I am ${this.age} years old`;
+// const person = {
+//   firstname: 'kacper',
+//   lastName: 'Nowak',
+//   age: 20,
+//   greet: function () {
+//     return `Hello my name is ${this.firstname} ${this.lastName} I am ${this.age} years old`;
+//   },
+// };
+// console.log(person.greet());
+
+//    Zadanie 14
+// Exercise 3: Nested Objects
+// Create an object book that contains:
+// title (book title),
+// author (author),
+// publisher (an object with properties name (publisher name) and year (publishing year)).
+// Print the book's title, author, and publisher name.
+const book = {
+  title: 'Hobbit',
+  author: 'Tolkien',
+  publisher: { name: 'Allen & Unwin', year: 1937 },
+  ret: function () {
+    return `${this.title} ${this.author}, published by ${this.publisher.name} ${this.publisher.year}`;
   },
 };
-console.log(person.greet());
+console.log(book.ret());
