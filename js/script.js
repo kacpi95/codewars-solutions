@@ -211,12 +211,27 @@
 // author (author),
 // publisher (an object with properties name (publisher name) and year (publishing year)).
 // Print the book's title, author, and publisher name.
-const book = {
-  title: 'Hobbit',
-  author: 'Tolkien',
-  publisher: { name: 'Allen & Unwin', year: 1937 },
-  ret: function () {
-    return `${this.title} ${this.author}, published by ${this.publisher.name} ${this.publisher.year}`;
-  },
+// const book = {
+//   title: 'Hobbit',
+//   author: 'Tolkien',
+//   publisher: { name: 'Allen & Unwin', year: 1937 },
+//   ret: function () {
+//     return `${this.title} ${this.author}, published by ${this.publisher.name} ${this.publisher.year}`;
+//   },
+// };
+// console.log(book.ret());
+//    Zadanie 15
+// Create an object person with properties:
+
+// name,
+// age,
+// country.
+// Use a for...in loop to print all the properties and their values.
+const person = {
+  name: 'Kacper',
+  age: 20,
+  country: 'Poland',
 };
-console.log(book.ret());
+for (let data in person) {
+  console.log(`${data}: ${person[data]}`);
+}
