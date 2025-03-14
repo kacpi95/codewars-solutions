@@ -169,3 +169,20 @@
 // let NumbersTwo = [5, 4, 3, 2, 1];
 // const reverseNumbers = NumbersOne.reverse();
 // console.log(reverseNumbers);
+
+//    Zadanie 12
+// Create an object called car with the following properties:
+// brand (car brand),
+// model (model),
+// year (manufacturing year),
+// color (color).
+const car = {
+  brand: 'bmw',
+  model: 'x5',
+  year: 2020,
+  color: 'black',
+  getInfo: function () {
+    return `${this.brand} ${this.model} ${this.year} ${this.color}`;
+  },
+};
+console.log(car.getInfo());
