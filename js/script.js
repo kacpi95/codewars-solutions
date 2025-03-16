@@ -227,11 +227,22 @@
 // age,
 // country.
 // Use a for...in loop to print all the properties and their values.
+// const person = {
+//   name: 'Kacper',
+//   age: 20,
+//   country: 'Poland',
+// };
+// for (let data in person) {
+//   console.log(`${data}: ${person[data]}`);
+// }
+//    Zadanie 16
+//Create an object person with properties name, age, and city. Then, log it to the console.
 const person = {
   name: 'Kacper',
   age: 20,
-  country: 'Poland',
+  city: 'Wrocław',
+  data: function () {
+    return `name: ${this.name}, age: ${this.age}, city: ${this.city}`;
+  },
 };
-for (let data in person) {
-  console.log(`${data}: ${person[data]}`);
-}
+console.log(person.data());
