@@ -242,7 +242,10 @@ const person = {
   age: 20,
   city: 'Wrocław',
   data: function () {
-    return `name: ${this.name}, age: ${this.age}, city: ${this.city}`;
+    return `name: ${this.name}, age: ${this.age}, city: ${this.city}, job: ${this.job}`;
   },
 };
+console.log(person.data());
+//Add a new property job to the person object and then update its value.
+person.job = 'IT';
 console.log(person.data());
