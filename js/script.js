@@ -249,3 +249,14 @@ console.log(person.data());
 //Add a new property job to the person object and then update its value.
 person.job = 'IT';
 console.log(person.data());
+// //Create an array users containing multiple objects representing users with properties id, name, and email.
+// Write a function findUserById(users, id) that returns the user object with the given id.
+const users = [
+  { id: 1, name: 'Kamil', email: 'kamil@gmail.com' },
+  { id: 2, name: 'Adrian', email: 'adrian@gmail.com' },
+  { id: 3, name: 'Daria', email: 'daria@gmail.com' },
+];
+function findUserById(users, id) {
+  return users.find((el) => el.id === id) || null;
+}
+console.log(findUserById(users, 2));
