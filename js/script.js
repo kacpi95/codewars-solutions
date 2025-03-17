@@ -274,3 +274,7 @@
 // Log the object to the console.
 const car = { brand: 'BMW', model: 'X7', year: 2025 };
 console.log(car);
+// Add a new property mileage (number) to the car object.
+// Change its value and log the updated object to the console.
+car.mileage = 100;
+console.log(car);
