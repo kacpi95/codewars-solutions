@@ -237,32 +237,40 @@
 // }
 //    Zadanie 16
 //Create an object person with properties name, age, and city. Then, log it to the console.
-const person = {
-  name: 'Kacper',
-  age: 20,
-  city: 'Wrocław',
-  data: function () {
-    return `name: ${this.name}, age: ${this.age}, city: ${this.city}, job: ${this.job}`;
-  },
-};
-console.log(person.data());
-//Add a new property job to the person object and then update its value.
-person.job = 'IT';
-console.log(person.data());
-// //Create an array users containing multiple objects representing users with properties id, name, and email.
-// Write a function findUserById(users, id) that returns the user object with the given id.
-const users = [
-  { id: 1, name: 'Kamil', age: 12, email: 'kamil@gmail.com' },
-  { id: 2, name: 'Adrian', age: 9, email: 'adrian@gmail.com' },
-  { id: 3, name: 'Daria', age: 20, email: 'daria@gmail.com' },
-];
-function findUserById(users, id) {
-  return users.find((el) => el.id === id) || null;
-}
-console.log(findUserById(users, 2));
+// const person = {
+//   name: 'Kacper',
+//   age: 20,
+//   city: 'Wrocław',
+//   data: function () {
+//     return `name: ${this.name}, age: ${this.age}, city: ${this.city}, job: ${this.job}`;
+//   },
+// };
+// console.log(person.data());
+// //Add a new property job to the person object and then update its value.
+// person.job = 'IT';
+// console.log(person.data());
+// // //Create an array users containing multiple objects representing users with properties id, name, and email.
+// // Write a function findUserById(users, id) that returns the user object with the given id.
+// const users = [
+//   { id: 1, name: 'Kamil', age: 12, email: 'kamil@gmail.com' },
+//   { id: 2, name: 'Adrian', age: 9, email: 'adrian@gmail.com' },
+//   { id: 3, name: 'Daria', age: 20, email: 'daria@gmail.com' },
+// ];
+// function findUserById(users, id) {
+//   return users.find((el) => el.id === id) || null;
+// }
+// console.log(findUserById(users, 2));
 
-// Write a function sortUsersByAge(users) that sorts an array of user objects by age.
-function sortUsersByAge(users) {
-  return users.sort((a, b) => a.age - b.age);
-}
-console.log(sortUsersByAge(users));
+// // Write a function sortUsersByAge(users) that sorts an array of user objects by age.
+// function sortUsersByAge(users) {
+//   return users.sort((a, b) => a.age - b.age);
+// }
+// console.log(sortUsersByAge(users));
+//    Zadanie 17
+//Create an object car with the following properties:
+// brand (string) – car brand
+// model (string) – car model
+// year (number) – production year
+// Log the object to the console.
+const car = { brand: 'BMW', model: 'X7', year: 2025 };
+console.log(car);
