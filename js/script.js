@@ -278,3 +278,11 @@ console.log(car);
 // Change its value and log the updated object to the console.
 car.mileage = 100;
 console.log(car);
+// Write a function logCarDetails(car) that:
+// Takes a car object as an argument.
+// Logs all its properties in the format key: value.
+// Test the function with the car object.
+function logCarDetails(car) {
+  return `brand: ${car.brand}, model: ${car.model}, year: ${car.year}, mileage: ${car.mileage} `;
+}
+console.log(logCarDetails(car));
