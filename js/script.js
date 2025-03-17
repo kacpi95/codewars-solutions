@@ -286,3 +286,21 @@ function logCarDetails(car) {
   return `brand: ${car.brand}, model: ${car.model}, year: ${car.year}, mileage: ${car.mileage} `;
 }
 console.log(logCarDetails(car));
+// Create an array cars containing multiple objects with the following properties:
+// brand (string)
+// model (string)
+// year (number)
+// mileage (number)
+// Write a function findCarByBrand(cars, brand) that:
+// Takes an array of cars and a brand name.
+// Returns the first car object that matches the brand or null if not found.
+// Test the function.
+const cars = [
+  { brand: 'audi', model: 'X8', year: 2020, mileage: 150 },
+  { brand: 'toyota', model: 'aygo', year: 2009, mileage: 250 },
+  { brand: 'nissan', model: 'patrol', year: 1999, mileage: 90 },
+];
+function findCarByBrand(cars, brand) {
+  return cars.find((el) => el.brand === brand) || null;
+}
+console.log(findCarByBrand(cars, 'audi'));
