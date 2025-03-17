@@ -304,3 +304,10 @@ function findCarByBrand(cars, brand) {
   return cars.find((el) => el.brand === brand) || null;
 }
 console.log(findCarByBrand(cars, 'audi'));
+// Write a function sortCarsByYear(cars) that:
+// Sorts the cars array in ascending order by the year property.
+// Test the function.
+function sortCarsByYears(cars) {
+  return cars.sort((a, b) => a.year - b.year);
+}
+console.log(sortCarsByYears(cars));
