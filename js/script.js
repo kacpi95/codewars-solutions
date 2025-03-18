@@ -272,42 +272,50 @@
 // model (string) – car model
 // year (number) – production year
 // Log the object to the console.
-const car = { brand: 'BMW', model: 'X7', year: 2025 };
-console.log(car);
-// Add a new property mileage (number) to the car object.
-// Change its value and log the updated object to the console.
-car.mileage = 100;
-console.log(car);
-// Write a function logCarDetails(car) that:
-// Takes a car object as an argument.
-// Logs all its properties in the format key: value.
-// Test the function with the car object.
-function logCarDetails(car) {
-  return `brand: ${car.brand}, model: ${car.model}, year: ${car.year}, mileage: ${car.mileage} `;
-}
-console.log(logCarDetails(car));
-// Create an array cars containing multiple objects with the following properties:
-// brand (string)
-// model (string)
-// year (number)
-// mileage (number)
-// Write a function findCarByBrand(cars, brand) that:
-// Takes an array of cars and a brand name.
-// Returns the first car object that matches the brand or null if not found.
-// Test the function.
-const cars = [
-  { brand: 'audi', model: 'X8', year: 2020, mileage: 150 },
-  { brand: 'toyota', model: 'aygo', year: 2009, mileage: 250 },
-  { brand: 'nissan', model: 'patrol', year: 1999, mileage: 90 },
-];
-function findCarByBrand(cars, brand) {
-  return cars.find((el) => el.brand === brand) || null;
-}
-console.log(findCarByBrand(cars, 'audi'));
-// Write a function sortCarsByYear(cars) that:
-// Sorts the cars array in ascending order by the year property.
-// Test the function.
-function sortCarsByYears(cars) {
-  return cars.sort((a, b) => a.year - b.year);
-}
-console.log(sortCarsByYears(cars));
+// const car = { brand: 'BMW', model: 'X7', year: 2025 };
+// console.log(car);
+// // Add a new property mileage (number) to the car object.
+// // Change its value and log the updated object to the console.
+// car.mileage = 100;
+// console.log(car);
+// // Write a function logCarDetails(car) that:
+// // Takes a car object as an argument.
+// // Logs all its properties in the format key: value.
+// // Test the function with the car object.
+// function logCarDetails(car) {
+//   return `brand: ${car.brand}, model: ${car.model}, year: ${car.year}, mileage: ${car.mileage} `;
+// }
+// console.log(logCarDetails(car));
+// // Create an array cars containing multiple objects with the following properties:
+// // brand (string)
+// // model (string)
+// // year (number)
+// // mileage (number)
+// // Write a function findCarByBrand(cars, brand) that:
+// // Takes an array of cars and a brand name.
+// // Returns the first car object that matches the brand or null if not found.
+// // Test the function.
+// const cars = [
+//   { brand: 'audi', model: 'X8', year: 2020, mileage: 150 },
+//   { brand: 'toyota', model: 'aygo', year: 2009, mileage: 250 },
+//   { brand: 'nissan', model: 'patrol', year: 1999, mileage: 90 },
+// ];
+// function findCarByBrand(cars, brand) {
+//   return cars.find((el) => el.brand === brand) || null;
+// }
+// console.log(findCarByBrand(cars, 'audi'));
+// // Write a function sortCarsByYear(cars) that:
+// // Sorts the cars array in ascending order by the year property.
+// // Test the function.
+// function sortCarsByYears(cars) {
+//   return cars.sort((a, b) => a.year - b.year);
+// }
+// console.log(sortCarsByYears(cars));
+//    Zadanie 18
+// Create an object book with the following properties:
+// title (string) – book title
+// author (string) – book author
+// year (number) – publication year
+// Log the object to the console.
+const book = { title: 'Hobbit', author: 'Tolkien', year: 1937 };
+console.log(book);
