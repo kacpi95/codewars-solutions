@@ -319,3 +319,7 @@
 // Log the object to the console.
 const book = { title: 'Hobbit', author: 'Tolkien', year: 1937 };
 console.log(book);
+// Add a new property pages (number) to the book object.
+// Change its value and log the updated object to the console.
+book.pages = 400;
+console.log(book);
