@@ -333,3 +333,19 @@ function logBookDetails(book) {
   }
 }
 logBookDetails(book);
+// Create an array library containing multiple book objects with the following properties:
+// title, author, year, pages
+// Write a function findBookByTitle(library, title) that:
+// Returns the book object matching the given title or null if not found.
+// Test the function.
+const library = [
+  { title: 'Hobbit', author: 'Tolkien', year: 1937, pages: 400 },
+  { title: 'Harry Potter', author: 'Rovling', year: 2000, pages: 808 },
+  { title: 'Dune', author: 'Herbert', year: 1965, pages: 412 },
+];
+
+function findBookByTitle(library, title) {
+  return library.find((book) => book.title === title) || null;
+}
+
+console.log(findBookByTitle(library, '1984'));
