@@ -323,3 +323,13 @@ console.log(book);
 // Change its value and log the updated object to the console.
 book.pages = 400;
 console.log(book);
+// Write a function logBookDetails(book) that:
+// Takes a book object as an argument.
+// Logs all its properties in the format key: value.
+// Test the function.
+function logBookDetails(book) {
+  for (const key in book) {
+    console.log(`${key}: ${book[key]}`);
+  }
+}
+logBookDetails(book);
