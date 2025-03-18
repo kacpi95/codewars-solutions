@@ -349,3 +349,11 @@ function findBookByTitle(library, title) {
 }
 
 console.log(findBookByTitle(library, '1984'));
+// Write a function sortBooksByYear(library) that:
+// Sorts the library array in ascending order by the year property.
+// Test the function.
+function sortBooksByYear(library) {
+  return [...library].sort((a, b) => a.year - b.year);
+}
+
+console.log(sortBooksByYear(library));
