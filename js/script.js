@@ -405,3 +405,22 @@ console.log(car.getInfo());
 // Fix the issue with this so it correctly refers to the car object.
 // Test the method.
 car.delayedInfo();
+// Create a class Book with the following properties:
+// title
+// author
+// year
+// Add a method getSummary() that returns:
+// "Title: [title], Author: [author], Year: [year]"
+// Create an instance of Book and log getSummary().
+class Book {
+  constructor(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+  }
+  getSummary() {
+    return `Tytuł ${this.title}, Autor: ${this.author}, Rok: ${this.year}`;
+  }
+}
+const newBook = new Book('Lord of the Rings', 'Tolkien', 1920);
+console.log(newBook.getSummary());
