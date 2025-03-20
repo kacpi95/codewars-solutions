@@ -393,5 +393,15 @@ const car = {
   getInfo: function () {
     return `Ten samochód to ${this.year}, ${this.brand}, ${this.model}`;
   },
+  delayedInfo: function () {
+    setTimeout(() => {
+      console.log(this.getInfo());
+    }, 1000);
+  },
 };
 console.log(car.getInfo());
+// Modify car by adding a new method delayedInfo(), which:
+// Uses setTimeout to log the car's info after 1 second.
+// Fix the issue with this so it correctly refers to the car object.
+// Test the method.
+car.delayedInfo();
