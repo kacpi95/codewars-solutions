@@ -317,43 +317,58 @@
 // author (string) – book author
 // year (number) – publication year
 // Log the object to the console.
-const book = { title: 'Hobbit', author: 'Tolkien', year: 1937 };
-console.log(book);
-// Add a new property pages (number) to the book object.
-// Change its value and log the updated object to the console.
-book.pages = 400;
-console.log(book);
-// Write a function logBookDetails(book) that:
-// Takes a book object as an argument.
-// Logs all its properties in the format key: value.
-// Test the function.
-function logBookDetails(book) {
-  for (const key in book) {
-    console.log(`${key}: ${book[key]}`);
-  }
-}
-logBookDetails(book);
-// Create an array library containing multiple book objects with the following properties:
-// title, author, year, pages
-// Write a function findBookByTitle(library, title) that:
-// Returns the book object matching the given title or null if not found.
-// Test the function.
-const library = [
-  { title: 'Hobbit', author: 'Tolkien', year: 1937, pages: 400 },
-  { title: 'Harry Potter', author: 'Rovling', year: 2000, pages: 808 },
-  { title: 'Dune', author: 'Herbert', year: 1965, pages: 412 },
-];
+// const book = { title: 'Hobbit', author: 'Tolkien', year: 1937 };
+// console.log(book);
+// // Add a new property pages (number) to the book object.
+// // Change its value and log the updated object to the console.
+// book.pages = 400;
+// console.log(book);
+// // Write a function logBookDetails(book) that:
+// // Takes a book object as an argument.
+// // Logs all its properties in the format key: value.
+// // Test the function.
+// function logBookDetails(book) {
+//   for (const key in book) {
+//     console.log(`${key}: ${book[key]}`);
+//   }
+// }
+// logBookDetails(book);
+// // Create an array library containing multiple book objects with the following properties:
+// // title, author, year, pages
+// // Write a function findBookByTitle(library, title) that:
+// // Returns the book object matching the given title or null if not found.
+// // Test the function.
+// const library = [
+//   { title: 'Hobbit', author: 'Tolkien', year: 1937, pages: 400 },
+//   { title: 'Harry Potter', author: 'Rovling', year: 2000, pages: 808 },
+//   { title: 'Dune', author: 'Herbert', year: 1965, pages: 412 },
+// ];
 
-function findBookByTitle(library, title) {
-  return library.find((book) => book.title === title) || null;
-}
+// function findBookByTitle(library, title) {
+//   return library.find((book) => book.title === title) || null;
+// }
 
-console.log(findBookByTitle(library, '1984'));
-// Write a function sortBooksByYear(library) that:
-// Sorts the library array in ascending order by the year property.
-// Test the function.
-function sortBooksByYear(library) {
-  return [...library].sort((a, b) => a.year - b.year);
-}
+// console.log(findBookByTitle(library, '1984'));
+// // Write a function sortBooksByYear(library) that:
+// // Sorts the library array in ascending order by the year property.
+// // Test the function.
+// function sortBooksByYear(library) {
+//   return [...library].sort((a, b) => a.year - b.year);
+// }
 
-console.log(sortBooksByYear(library));
+// console.log(sortBooksByYear(library));
+//    Zadanie 19
+// Create a constructor function Person that takes the following parameters:
+// name (string) – person’s name
+// age (number) – person’s age
+// city (string) – person’s city
+// Inside the function, use this to assign these values to the new object.
+// Create an instance of Person and log it to the console.
+function Person(name, age, city) {
+  const personElement = this;
+  personElement.name = name;
+  personElement.age = age;
+  personElement.city = city;
+}
+const personOne = new Person('Kacper', 30, 'Wroclaw');
+console.log(personOne);
