@@ -379,3 +379,19 @@ console.log(personOne);
 // Returns a string in the format: "Hi, I'm [name] from [city]!".
 // Call the method on an instance and log the result.
 console.log(personOne.greet());
+// Create an object car with the following properties:
+// brand (string)
+// model (string)
+// year (number)
+// getInfo() – a method that returns a string in the format:
+// "This car is a [year] [brand] [model]."
+// Call getInfo() and log the result.
+const car = {
+  brand: 'Audi',
+  model: 'Q5',
+  year: 2020,
+  getInfo: function () {
+    return `Ten samochód to ${this.year}, ${this.brand}, ${this.model}`;
+  },
+};
+console.log(car.getInfo());
