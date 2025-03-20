@@ -369,6 +369,13 @@ function Person(name, age, city) {
   personElement.name = name;
   personElement.age = age;
   personElement.city = city;
+  personElement.greet = function () {
+    return `Cześć, jestem ${personElement.name} z ${personElement.city}`;
+  };
 }
 const personOne = new Person('Kacper', 30, 'Wroclaw');
 console.log(personOne);
+// Add a method greet() to Person.prototype that:
+// Returns a string in the format: "Hi, I'm [name] from [city]!".
+// Call the method on an instance and log the result.
+console.log(personOne.greet());
