@@ -364,21 +364,21 @@
 // city (string) – person’s city
 // Inside the function, use this to assign these values to the new object.
 // Create an instance of Person and log it to the console.
-function Person(name, age, city) {
-  const personElement = this;
-  personElement.name = name;
-  personElement.age = age;
-  personElement.city = city;
-  personElement.greet = function () {
-    return `Cześć, jestem ${personElement.name} z ${personElement.city}`;
-  };
-}
-const personOne = new Person('Kacper', 30, 'Wroclaw');
-console.log(personOne);
-// Add a method greet() to Person.prototype that:
-// Returns a string in the format: "Hi, I'm [name] from [city]!".
-// Call the method on an instance and log the result.
-console.log(personOne.greet());
+// function Person(name, age, city) {
+//   const personElement = this;
+//   personElement.name = name;
+//   personElement.age = age;
+//   personElement.city = city;
+//   personElement.greet = function () {
+//     return `Cześć, jestem ${personElement.name} z ${personElement.city}`;
+//   };
+// }
+// const personOne = new Person('Kacper', 30, 'Wroclaw');
+// console.log(personOne);
+// // Add a method greet() to Person.prototype that:
+// // Returns a string in the format: "Hi, I'm [name] from [city]!".
+// // Call the method on an instance and log the result.
+// console.log(personOne.greet());
 // Create an object car with the following properties:
 // brand (string)
 // model (string)
@@ -386,41 +386,55 @@ console.log(personOne.greet());
 // getInfo() – a method that returns a string in the format:
 // "This car is a [year] [brand] [model]."
 // Call getInfo() and log the result.
-const car = {
-  brand: 'Audi',
-  model: 'Q5',
-  year: 2020,
-  getInfo: function () {
-    return `Ten samochód to ${this.year}, ${this.brand}, ${this.model}`;
-  },
-  delayedInfo: function () {
-    setTimeout(() => {
-      console.log(this.getInfo());
-    }, 1000);
-  },
-};
-console.log(car.getInfo());
-// Modify car by adding a new method delayedInfo(), which:
-// Uses setTimeout to log the car's info after 1 second.
-// Fix the issue with this so it correctly refers to the car object.
-// Test the method.
-car.delayedInfo();
-// Create a class Book with the following properties:
-// title
-// author
-// year
-// Add a method getSummary() that returns:
-// "Title: [title], Author: [author], Year: [year]"
-// Create an instance of Book and log getSummary().
-class Book {
-  constructor(title, author, year) {
-    this.title = title;
-    this.author = author;
-    this.year = year;
-  }
-  getSummary() {
-    return `Tytuł ${this.title}, Autor: ${this.author}, Rok: ${this.year}`;
+// const car = {
+//   brand: 'Audi',
+//   model: 'Q5',
+//   year: 2020,
+//   getInfo: function () {
+//     return `Ten samochód to ${this.year}, ${this.brand}, ${this.model}`;
+//   },
+//   delayedInfo: function () {
+//     setTimeout(() => {
+//       console.log(this.getInfo());
+//     }, 1000);
+//   },
+// };
+// console.log(car.getInfo());
+// // Modify car by adding a new method delayedInfo(), which:
+// // Uses setTimeout to log the car's info after 1 second.
+// // Fix the issue with this so it correctly refers to the car object.
+// // Test the method.
+// car.delayedInfo();
+// // Create a class Book with the following properties:
+// // title
+// // author
+// // year
+// // Add a method getSummary() that returns:
+// // "Title: [title], Author: [author], Year: [year]"
+// // Create an instance of Book and log getSummary().
+// class Book {
+//   constructor(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+//   }
+//   getSummary() {
+//     return `Tytuł ${this.title}, Autor: ${this.author}, Rok: ${this.year}`;
+//   }
+// }
+// const newBook = new Book('Lord of the Rings', 'Tolkien', 1920);
+// console.log(newBook.getSummary());
+//    Zadanie 20
+// Create a class called Animal with a constructor that takes the following parameters:
+// name (string) – the name of the animal
+// species (string) – the species of the animal
+// The constructor should assign values to this.name and this.species.
+// Create an instance of the class and log it to the console.
+class Animal {
+  constructor(name, species) {
+    this.name = name;
+    this.species = species;
   }
 }
-const newBook = new Book('Lord of the Rings', 'Tolkien', 1920);
-console.log(newBook.getSummary());
+const newAnimal = new Animal('Leo', 'tiger');
+console.log(newAnimal);
