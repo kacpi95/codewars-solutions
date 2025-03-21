@@ -435,6 +435,13 @@ class Animal {
     this.name = name;
     this.species = species;
   }
+  describe() {
+    return `This is a ${this.species}, named ${this.name}`;
+  }
 }
 const newAnimal = new Animal('Leo', 'tiger');
 console.log(newAnimal);
+// Add a method describe() to Animal that returns a string:
+// "This is a [species] named [name]."
+// Call the method on an instance and log the result.
+console.log(newAnimal.describe());
