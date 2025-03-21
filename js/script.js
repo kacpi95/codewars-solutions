@@ -438,6 +438,9 @@ class Animal {
   describe() {
     return `This is a ${this.species}, named ${this.name}`;
   }
+  static info() {
+    return `Animals are living beings`;
+  }
 }
 const newAnimal = new Animal('Leo', 'tiger');
 console.log(newAnimal);
@@ -461,3 +464,6 @@ class Dog extends Animal {
 const newDog = new Dog('Leo', 'buldog');
 console.log(newDog.bark());
 console.log(newDog.describe());
+// Add a static method info() to Animal that returns "Animals are living beings.".
+// Call the method without creating an instance (Animal.info()).
+console.log(Animal.info());
