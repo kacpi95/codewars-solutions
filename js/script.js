@@ -445,3 +445,19 @@ console.log(newAnimal);
 // "This is a [species] named [name]."
 // Call the method on an instance and log the result.
 console.log(newAnimal.describe());
+// Create a class Dog that inherits from Animal.
+// The Dog constructor should accept an additional parameter breed and assign it to this.breed.
+// Add a method bark() that returns "Woof! Woof!".
+// Create an instance of Dog and test both describe() and bark().
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name, 'Dog');
+    this.breed = breed;
+  }
+  bark() {
+    return `Woof! Woof!`;
+  }
+}
+const newDog = new Dog('Leo', 'buldog');
+console.log(newDog.bark());
+console.log(newDog.describe());
