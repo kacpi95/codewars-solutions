@@ -460,6 +460,12 @@ class Dog extends Animal {
   bark() {
     return `Woof! Woof!`;
   }
+  get dogInfo() {
+    return `The dogs name is ${this.name} and its a ${this.breed}`;
+  }
+  set renameDog(newName) {
+    this.name = newName;
+  }
 }
 const newDog = new Dog('Leo', 'buldog');
 console.log(newDog.bark());
@@ -467,3 +473,11 @@ console.log(newDog.describe());
 // Add a static method info() to Animal that returns "Animals are living beings.".
 // Call the method without creating an instance (Animal.info()).
 console.log(Animal.info());
+// Add to Dog:
+// A getter dogInfo that returns "The dog's name is [name] and it's a [breed]."
+// A setter renameDog(newName) that updates this.name.
+// Test both getter and setter on an instance.
+const myDog = new Dog('Aleks', 'buldog');
+myDog.renameDog = 'Zuzia';
+console.log(myDog.dogInfo);
+console.log(myDog.dogInfo);
