@@ -526,3 +526,13 @@ order.addProduct(product1);
 order.addProduct(product2);
 
 console.log(`Total price: ${order.getTotalPrice()}`);
+
+//    Zadanie 22
+// Create a class Employee with properties name, position, and salary.
+class Employee {
+  constructor(name, position, salary) {
+    this.name = name;
+    this.position = position;
+    this.salary = salary;
+  }
+}
