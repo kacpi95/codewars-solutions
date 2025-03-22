@@ -516,3 +516,13 @@ class Order {
     return this.#products.reduce((total, product) => total + product.price, 0);
   }
 }
+// Create several Product instances.
+// Create an Order instance, add products to it, and log the total price.
+const product1 = new Product('mleko', 5);
+const product2 = new Product('cola', 10);
+
+const order = new Order();
+order.addProduct(product1);
+order.addProduct(product2);
+
+console.log(`Total price: ${order.getTotalPrice()}`);
