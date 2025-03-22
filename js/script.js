@@ -535,4 +535,15 @@ class Employee {
     this.position = position;
     this.salary = salary;
   }
+  getDetails() {
+    return `Employee: ${this.name}, Position: ${this.position}, Salary: $${this.salary}`;
+  }
 }
+// Add a method getDetails() that returns:
+// "Employee: [name], Position: [position], Salary: $[salary]".
+
+// Create two employee instances and log their details.
+const emp1 = new Employee('kacper', 'Software Engineer', 75000);
+const emp2 = new Employee('Daria', 'Project Manager', 90000);
+console.log(emp1.getDetails());
+console.log(emp2.getDetails());
