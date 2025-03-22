@@ -497,3 +497,22 @@ class Product {
     return `Product: ${this.name}, Price: ${this.price}`;
   }
 }
+// Create the Order class
+// Define an Order class with a private array #products to store products.
+
+// The constructor initializes an empty #products array.
+// Implement addProduct(product), which adds a product to the #products array.
+// Create a method getTotalPrice(), which calculates and returns the total price of all products in the order.
+class Order {
+  #products = [];
+  addProduct(product) {
+    if (product instanceof Product) {
+      this.#products.push(product);
+    } else {
+      console.log('error');
+    }
+  }
+  getTotalPrice() {
+    return this.#products.reduce((total, product) => total + product.price, 0);
+  }
+}
