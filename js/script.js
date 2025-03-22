@@ -430,54 +430,70 @@
 // species (string) – the species of the animal
 // The constructor should assign values to this.name and this.species.
 // Create an instance of the class and log it to the console.
-class Animal {
-  constructor(name, species) {
+// class Animal {
+//   constructor(name, species) {
+//     this.name = name;
+//     this.species = species;
+//   }
+//   describe() {
+//     return `This is a ${this.species}, named ${this.name}`;
+//   }
+//   static info() {
+//     return `Animals are living beings`;
+//   }
+// }
+// const newAnimal = new Animal('Leo', 'tiger');
+// console.log(newAnimal);
+// // Add a method describe() to Animal that returns a string:
+// // "This is a [species] named [name]."
+// // Call the method on an instance and log the result.
+// console.log(newAnimal.describe());
+// // Create a class Dog that inherits from Animal.
+// // The Dog constructor should accept an additional parameter breed and assign it to this.breed.
+// // Add a method bark() that returns "Woof! Woof!".
+// // Create an instance of Dog and test both describe() and bark().
+// class Dog extends Animal {
+//   constructor(name, breed) {
+//     super(name, 'Dog');
+//     this.breed = breed;
+//   }
+//   bark() {
+//     return `Woof! Woof!`;
+//   }
+//   get dogInfo() {
+//     return `The dogs name is ${this.name} and its a ${this.breed}`;
+//   }
+//   set renameDog(newName) {
+//     this.name = newName;
+//   }
+// }
+// const newDog = new Dog('Leo', 'buldog');
+// console.log(newDog.bark());
+// console.log(newDog.describe());
+// // Add a static method info() to Animal that returns "Animals are living beings.".
+// // Call the method without creating an instance (Animal.info()).
+// console.log(Animal.info());
+// // Add to Dog:
+// // A getter dogInfo that returns "The dog's name is [name] and it's a [breed]."
+// // A setter renameDog(newName) that updates this.name.
+// // Test both getter and setter on an instance.
+// const myDog = new Dog('Aleks', 'buldog');
+// myDog.renameDog = 'Zuzia';
+// console.log(myDog.dogInfo);
+// console.log(myDog.dogInfo);
+// Zadanie 21
+// Implement a simple E-commerce Order System using JavaScript classes with private fields and methods.
+// Create the Product class
+// Define a class Product with properties:
+// name (string)
+// price (number)
+// Add a method getInfo(), which returns "Product: [name], Price: $[price]".
+class Product {
+  constructor(name, price) {
     this.name = name;
-    this.species = species;
+    this.price = price;
   }
-  describe() {
-    return `This is a ${this.species}, named ${this.name}`;
-  }
-  static info() {
-    return `Animals are living beings`;
+  getInfo() {
+    return `Product: ${this.name}, Price: ${this.price}`;
   }
 }
-const newAnimal = new Animal('Leo', 'tiger');
-console.log(newAnimal);
-// Add a method describe() to Animal that returns a string:
-// "This is a [species] named [name]."
-// Call the method on an instance and log the result.
-console.log(newAnimal.describe());
-// Create a class Dog that inherits from Animal.
-// The Dog constructor should accept an additional parameter breed and assign it to this.breed.
-// Add a method bark() that returns "Woof! Woof!".
-// Create an instance of Dog and test both describe() and bark().
-class Dog extends Animal {
-  constructor(name, breed) {
-    super(name, 'Dog');
-    this.breed = breed;
-  }
-  bark() {
-    return `Woof! Woof!`;
-  }
-  get dogInfo() {
-    return `The dogs name is ${this.name} and its a ${this.breed}`;
-  }
-  set renameDog(newName) {
-    this.name = newName;
-  }
-}
-const newDog = new Dog('Leo', 'buldog');
-console.log(newDog.bark());
-console.log(newDog.describe());
-// Add a static method info() to Animal that returns "Animals are living beings.".
-// Call the method without creating an instance (Animal.info()).
-console.log(Animal.info());
-// Add to Dog:
-// A getter dogInfo that returns "The dog's name is [name] and it's a [breed]."
-// A setter renameDog(newName) that updates this.name.
-// Test both getter and setter on an instance.
-const myDog = new Dog('Aleks', 'buldog');
-myDog.renameDog = 'Zuzia';
-console.log(myDog.dogInfo);
-console.log(myDog.dogInfo);
