@@ -577,4 +577,14 @@ class Car extends Vehicle {
   getDetails() {
     return `Car: ${this.brand} ${this.model}, Year: ${this.year}, Fuel Type: ${this.fuelType}`;
   }
+  isElectric() {
+    return this.fuelType.toLowerCase() === 'electric';
+  }
 }
+// Create two car instances and log their details.
+// Add a method isElectric() in Car that returns true if fuelType is "electric", otherwise false.
+const car1 = new Car('Tesla', 'Model 3', 2023, 'Electric');
+const car2 = new Car('Toyota', 'Corolla', 2020, 'Diesel');
+
+console.log(car1.getDetails());
+console.log(car2.getDetails());
