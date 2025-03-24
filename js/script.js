@@ -566,3 +566,15 @@ class Vehicle {
     return `Vehicle: ${this.brand} ${this.model}, Year: ${this.year}`;
   }
 }
+// Create a subclass Car that extends Vehicle, adding a new property fuelType (string).
+
+// Modify getDetails() to include fuel type in the output.
+class Car extends Vehicle {
+  constructor(brand, model, year, fuelType) {
+    super(brand, model, year);
+    this.fuelType = fuelType;
+  }
+  getDetails() {
+    return `Car: ${this.brand} ${this.model}, Year: ${this.year}, Fuel Type: ${this.fuelType}`;
+  }
+}
