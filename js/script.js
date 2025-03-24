@@ -559,4 +559,10 @@ class Vehicle {
     this.model = model;
     this.year = year;
   }
+
+  // Add a method getDetails() that returns:
+  // "Vehicle: [brand] [model], Year: [year]".
+  getDetails() {
+    return `Vehicle: ${this.brand} ${this.model}, Year: ${this.year}`;
+  }
 }
