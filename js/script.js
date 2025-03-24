@@ -488,62 +488,75 @@
 // name (string)
 // price (number)
 // Add a method getInfo(), which returns "Product: [name], Price: $[price]".
-class Product {
-  constructor(name, price) {
-    this.name = name;
-    this.price = price;
-  }
-  getInfo() {
-    return `Product: ${this.name}, Price: ${this.price}`;
+// class Product {
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//   }
+//   getInfo() {
+//     return `Product: ${this.name}, Price: ${this.price}`;
+//   }
+// }
+// // Create the Order class
+// // Define an Order class with a private array #products to store products.
+
+// // The constructor initializes an empty #products array.
+// // Implement addProduct(product), which adds a product to the #products array.
+// // Create a method getTotalPrice(), which calculates and returns the total price of all products in the order.
+// class Order {
+//   #products = [];
+//   addProduct(product) {
+//     if (product instanceof Product) {
+//       this.#products.push(product);
+//     } else {
+//       console.log('error');
+//     }
+//   }
+//   getTotalPrice() {
+//     return this.#products.reduce((total, product) => total + product.price, 0);
+//   }
+// }
+// // Create several Product instances.
+// // Create an Order instance, add products to it, and log the total price.
+// const product1 = new Product('mleko', 5);
+// const product2 = new Product('cola', 10);
+
+// const order = new Order();
+// order.addProduct(product1);
+// order.addProduct(product2);
+
+// console.log(`Total price: ${order.getTotalPrice()}`);
+
+// //    Zadanie 22
+// // Create a class Employee with properties name, position, and salary.
+// class Employee {
+//   constructor(name, position, salary) {
+//     this.name = name;
+//     this.position = position;
+//     this.salary = salary;
+//   }
+//   getDetails() {
+//     return `Employee: ${this.name}, Position: ${this.position}, Salary: $${this.salary}`;
+//   }
+// }
+// // Add a method getDetails() that returns:
+// // "Employee: [name], Position: [position], Salary: $[salary]".
+
+// // Create two employee instances and log their details.
+// const emp1 = new Employee('kacper', 'Software Engineer', 75000);
+// const emp2 = new Employee('Daria', 'Project Manager', 90000);
+// console.log(emp1.getDetails());
+// console.log(emp2.getDetails());
+//    Zadanie 23
+// Create a class Vehicle with properties:
+
+// brand (string)
+// model (string)
+// year (number)
+class Vehicle {
+  constructor(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
   }
 }
-// Create the Order class
-// Define an Order class with a private array #products to store products.
-
-// The constructor initializes an empty #products array.
-// Implement addProduct(product), which adds a product to the #products array.
-// Create a method getTotalPrice(), which calculates and returns the total price of all products in the order.
-class Order {
-  #products = [];
-  addProduct(product) {
-    if (product instanceof Product) {
-      this.#products.push(product);
-    } else {
-      console.log('error');
-    }
-  }
-  getTotalPrice() {
-    return this.#products.reduce((total, product) => total + product.price, 0);
-  }
-}
-// Create several Product instances.
-// Create an Order instance, add products to it, and log the total price.
-const product1 = new Product('mleko', 5);
-const product2 = new Product('cola', 10);
-
-const order = new Order();
-order.addProduct(product1);
-order.addProduct(product2);
-
-console.log(`Total price: ${order.getTotalPrice()}`);
-
-//    Zadanie 22
-// Create a class Employee with properties name, position, and salary.
-class Employee {
-  constructor(name, position, salary) {
-    this.name = name;
-    this.position = position;
-    this.salary = salary;
-  }
-  getDetails() {
-    return `Employee: ${this.name}, Position: ${this.position}, Salary: $${this.salary}`;
-  }
-}
-// Add a method getDetails() that returns:
-// "Employee: [name], Position: [position], Salary: $[salary]".
-
-// Create two employee instances and log their details.
-const emp1 = new Employee('kacper', 'Software Engineer', 75000);
-const emp2 = new Employee('Daria', 'Project Manager', 90000);
-console.log(emp1.getDetails());
-console.log(emp2.getDetails());
