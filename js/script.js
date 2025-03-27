@@ -625,14 +625,21 @@
 // Write a function sortStudentsByGrade(students) that sorts the students in order of their grade (A to F).
 
 // Test the function and display the sorted list of students.
-const students = [
-  { name: "Alicja", grade: "B" },
-  { name: "Bruno", grade: "A" },
-  { name: "Czesław", grade: "C" },
-  { name: "Dawid", grade: "A" },
-];
-function sortStudentsByGrade(students) {
-  const gradeOrder = ["A", "B", "C", "D", "E", "F"];
-  return students.sort((a, b) => gradeOrder.indexOf(a.grade) - gradeOrder.indexOf(b.grade));
-}
-console.log(sortStudentsByGrade(students));
+// const students = [
+//   { name: "Alicja", grade: "B" },
+//   { name: "Bruno", grade: "A" },
+//   { name: "Czesław", grade: "C" },
+//   { name: "Dawid", grade: "A" },
+// ];
+// function sortStudentsByGrade(students) {
+//   const gradeOrder = ["A", "B", "C", "D", "E", "F"];
+//   return students.sort((a, b) => gradeOrder.indexOf(a.grade) - gradeOrder.indexOf(b.grade));
+// }
+// console.log(sortStudentsByGrade(students));
+//    Zadanie 27
+// Create two arrays: array1 and array2. Merge them into a new array mergedArray without using the .concat() method.
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const mergedArray = [...array1, ...array2];
+
+console.log(mergedArray);
