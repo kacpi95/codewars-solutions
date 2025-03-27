@@ -553,38 +553,54 @@
 // brand (string)
 // model (string)
 // year (number)
-class Vehicle {
-  constructor(brand, model, year) {
-    this.brand = brand;
-    this.model = model;
-    this.year = year;
-  }
+// class Vehicle {
+//   constructor(brand, model, year) {
+//     this.brand = brand;
+//     this.model = model;
+//     this.year = year;
+//   }
 
-  // Add a method getDetails() that returns:
-  // "Vehicle: [brand] [model], Year: [year]".
-  getDetails() {
-    return `Vehicle: ${this.brand} ${this.model}, Year: ${this.year}`;
-  }
+//   // Add a method getDetails() that returns:
+//   // "Vehicle: [brand] [model], Year: [year]".
+//   getDetails() {
+//     return `Vehicle: ${this.brand} ${this.model}, Year: ${this.year}`;
+//   }
+// }
+// // Create a subclass Car that extends Vehicle, adding a new property fuelType (string).
+
+// // Modify getDetails() to include fuel type in the output.
+// class Car extends Vehicle {
+//   constructor(brand, model, year, fuelType) {
+//     super(brand, model, year);
+//     this.fuelType = fuelType;
+//   }
+//   getDetails() {
+//     return `Car: ${this.brand} ${this.model}, Year: ${this.year}, Fuel Type: ${this.fuelType}`;
+//   }
+//   isElectric() {
+//     return this.fuelType.toLowerCase() === 'electric';
+//   }
+// }
+// // Create two car instances and log their details.
+// // Add a method isElectric() in Car that returns true if fuelType is "electric", otherwise false.
+// const car1 = new Car('Tesla', 'Model 3', 2023, 'Electric');
+// const car2 = new Car('Toyota', 'Corolla', 2020, 'Diesel');
+
+// console.log(car1.getDetails());
+// console.log(car2.getDetails());
+//    Zadanie 24
+// Create an array movies containing several objects with properties: title, year, and rating.
+
+// Write a function getTopRatedMovies(movies) that returns movies with a rating higher than 8.
+
+// Test the function with a list of movies and display the top-rated ones.
+const movies = [
+  { title: "Inception", year: 2010, rating: 8.8 },
+  { title: "Titanic", year: 1997, rating: 7.8 },
+  { title: "The Dark Knight", year: 2008, rating: 9.0 },
+  { title: "The Lord of the rings", year: 2002, rating: 9.4 },
+];
+function getTopRatedMovies(movies) {
+  return movies.filter(movie => movie.rating > 8);
 }
-// Create a subclass Car that extends Vehicle, adding a new property fuelType (string).
-
-// Modify getDetails() to include fuel type in the output.
-class Car extends Vehicle {
-  constructor(brand, model, year, fuelType) {
-    super(brand, model, year);
-    this.fuelType = fuelType;
-  }
-  getDetails() {
-    return `Car: ${this.brand} ${this.model}, Year: ${this.year}, Fuel Type: ${this.fuelType}`;
-  }
-  isElectric() {
-    return this.fuelType.toLowerCase() === 'electric';
-  }
-}
-// Create two car instances and log their details.
-// Add a method isElectric() in Car that returns true if fuelType is "electric", otherwise false.
-const car1 = new Car('Tesla', 'Model 3', 2023, 'Electric');
-const car2 = new Car('Toyota', 'Corolla', 2020, 'Diesel');
-
-console.log(car1.getDetails());
-console.log(car2.getDetails());
+console.log(getTopRatedMovies(movies));
