@@ -610,12 +610,29 @@
 // Write a function getInventoryValue(inventory) that returns the total value of the inventory (sum of quantity * price for each item).
 
 // Test the function with a sample inventory.
-const inventory = [
-  { id: 1, name: "Laptop", quantity: 2, price: 5000 },
-  { id: 2, name: "Phone", quantity: 5, price: 3500 },
-  { id: 3, name: "Tablet", quantity: 3, price: 1000 },
+// const inventory = [
+//   { id: 1, name: "Laptop", quantity: 2, price: 5000 },
+//   { id: 2, name: "Phone", quantity: 5, price: 3500 },
+//   { id: 3, name: "Tablet", quantity: 3, price: 1000 },
+// ];
+// function getInventoryValue(inventory) {
+//   return inventory.reduce((total, item) => total + item.quantity * item.price, 0);
+// }
+// console.log(getInventoryValue(inventory));
+//    Zadanie 26
+// Create an array students containing student objects with properties: name and grade (a letter grade like "A", "B", etc.).
+
+// Write a function sortStudentsByGrade(students) that sorts the students in order of their grade (A to F).
+
+// Test the function and display the sorted list of students.
+const students = [
+  { name: "Alicja", grade: "B" },
+  { name: "Bruno", grade: "A" },
+  { name: "Czesław", grade: "C" },
+  { name: "Dawid", grade: "A" },
 ];
-function getInventoryValue(inventory) {
-  return inventory.reduce((total, item) => total + item.quantity * item.price, 0);
+function sortStudentsByGrade(students) {
+  const gradeOrder = ["A", "B", "C", "D", "E", "F"];
+  return students.sort((a, b) => gradeOrder.indexOf(a.grade) - gradeOrder.indexOf(b.grade));
 }
-console.log(getInventoryValue(inventory));
+console.log(sortStudentsByGrade(students));
