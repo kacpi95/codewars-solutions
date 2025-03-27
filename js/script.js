@@ -594,13 +594,28 @@
 // Write a function getTopRatedMovies(movies) that returns movies with a rating higher than 8.
 
 // Test the function with a list of movies and display the top-rated ones.
-const movies = [
-  { title: "Inception", year: 2010, rating: 8.8 },
-  { title: "Titanic", year: 1997, rating: 7.8 },
-  { title: "The Dark Knight", year: 2008, rating: 9.0 },
-  { title: "The Lord of the rings", year: 2002, rating: 9.4 },
+// const movies = [
+//   { title: "Inception", year: 2010, rating: 8.8 },
+//   { title: "Titanic", year: 1997, rating: 7.8 },
+//   { title: "The Dark Knight", year: 2008, rating: 9.0 },
+//   { title: "The Lord of the rings", year: 2002, rating: 9.4 },
+// ];
+// function getTopRatedMovies(movies) {
+//   return movies.filter(movie => movie.rating > 8);
+// }
+// console.log(getTopRatedMovies(movies));
+//    Zadanie 25
+// Create an array inventory containing objects that represent products with id, name, quantity, and price.
+
+// Write a function getInventoryValue(inventory) that returns the total value of the inventory (sum of quantity * price for each item).
+
+// Test the function with a sample inventory.
+const inventory = [
+  { id: 1, name: "Laptop", quantity: 2, price: 5000 },
+  { id: 2, name: "Phone", quantity: 5, price: 3500 },
+  { id: 3, name: "Tablet", quantity: 3, price: 1000 },
 ];
-function getTopRatedMovies(movies) {
-  return movies.filter(movie => movie.rating > 8);
+function getInventoryValue(inventory) {
+  return inventory.reduce((total, item) => total + item.quantity * item.price, 0);
 }
-console.log(getTopRatedMovies(movies));
+console.log(getInventoryValue(inventory));
