@@ -2,8 +2,6 @@
 // Grade book
 // Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
 
-const { name } = require('browser-sync');
-
 // Numerical Score	Letter Grade
 // 90 <= score <= 100	'A'
 // 80 <= score < 90	'B'
@@ -650,9 +648,13 @@ class Product {
   constructor(name, price) {
     this.name = name;
     this.price = price;
+    this.AmountWidget = new AmountWidget();
   }
   render() {
-    console.log(`Product: ${name}, Price: ${price}`);
+    console.log(`Product: ${this.name}, Price: ${this.price}`);
+  }
+  getTotalPrice() {
+    return this.price * this.AmountWidget.value;
   }
 }
 
@@ -660,5 +662,23 @@ class AmountWidget {
   constructor() {
     this.value = 1;
   }
+  increase() {
+    this.value++;
+  }
+  decrease() {
+    if (this.value > 0) {
+      this.value--;
+    }
+  }
 }
-
+const products = [
+  new Product('Pizza', 20),
+  new Product('Burger', 30),
+  new Product('Salad', 10),
+];
+for (const product of products) {
+  product.render();
+  product.AmountWidget.increase();
+  product.AmountWidget.increase();
+  console.log(`Total price for ${product.name}: ${product.getTotalPrice()}`);
+}
