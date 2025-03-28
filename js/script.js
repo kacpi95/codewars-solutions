@@ -644,41 +644,54 @@
 
 // console.log(mergedArray);
 //    Zadanie 28
-class Product {
-  constructor(name, price) {
-    this.name = name;
+// class Product {
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//     this.AmountWidget = new AmountWidget();
+//   }
+//   render() {
+//     console.log(`Product: ${this.name}, Price: ${this.price}`);
+//   }
+//   getTotalPrice() {
+//     return this.price * this.AmountWidget.value;
+//   }
+// }
+
+// class AmountWidget {
+//   constructor() {
+//     this.value = 1;
+//   }
+//   increase() {
+//     this.value++;
+//   }
+//   decrease() {
+//     if (this.value > 0) {
+//       this.value--;
+//     }
+//   }
+// }
+// const products = [
+//   new Product('Pizza', 20),
+//   new Product('Burger', 30),
+//   new Product('Salad', 10),
+// ];
+// for (const product of products) {
+//   product.render();
+//   product.AmountWidget.increase();
+//   product.AmountWidget.increase();
+//   console.log(`Total price for ${product.name}: ${product.getTotalPrice()}`);
+// }
+//    Zadanie 29
+class Book {
+  constructor(title, author, price) {
+    this.title = title;
+    this.author = author;
     this.price = price;
-    this.AmountWidget = new AmountWidget();
   }
-  render() {
-    console.log(`Product: ${this.name}, Price: ${this.price}`);
-  }
-  getTotalPrice() {
-    return this.price * this.AmountWidget.value;
+  getInfo() {
+    return `Book: ${this.title}, by ${this.author}, Price ${this.price}`;
   }
 }
 
-class AmountWidget {
-  constructor() {
-    this.value = 1;
-  }
-  increase() {
-    this.value++;
-  }
-  decrease() {
-    if (this.value > 0) {
-      this.value--;
-    }
-  }
-}
-const products = [
-  new Product('Pizza', 20),
-  new Product('Burger', 30),
-  new Product('Salad', 10),
-];
-for (const product of products) {
-  product.render();
-  product.AmountWidget.increase();
-  product.AmountWidget.increase();
-  console.log(`Total price for ${product.name}: ${product.getTotalPrice()}`);
-}
+
