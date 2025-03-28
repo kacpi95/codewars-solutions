@@ -695,3 +695,22 @@ class Book {
 }
 
 
+class Library {
+  constructor() {
+    this.books = [];
+  }
+  addBook(book) {
+    this.books.push(book);
+  }
+  showBooks() {
+    for (const book of this.books) {
+      console.log(book.getInfo());
+    }
+  }
+}
+const book1 = new Book('The Hobbit', 'J.R.R. Tolkien', 30);
+const book2 = new Book('The Lord of the Rings', 'J.R.R. Tolkien', 25);
+const library = new Library();
+library.addBook(book1);
+library.addBook(book2);
+library.showBooks();
