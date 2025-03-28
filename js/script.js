@@ -2,6 +2,8 @@
 // Grade book
 // Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.
 
+const { name } = require('browser-sync');
+
 // Numerical Score	Letter Grade
 // 90 <= score <= 100	'A'
 // 80 <= score < 90	'B'
@@ -638,8 +640,25 @@
 // console.log(sortStudentsByGrade(students));
 //    Zadanie 27
 // Create two arrays: array1 and array2. Merge them into a new array mergedArray without using the .concat() method.
-const array1 = [1, 2, 3];
-const array2 = [4, 5, 6];
-const mergedArray = [...array1, ...array2];
+// const array1 = [1, 2, 3];
+// const array2 = [4, 5, 6];
+// const mergedArray = [...array1, ...array2];
 
-console.log(mergedArray);
+// console.log(mergedArray);
+//    Zadanie 28
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+  render() {
+    console.log(`Product: ${name}, Price: ${price}`);
+  }
+}
+
+class AmountWidget {
+  constructor() {
+    this.value = 1;
+  }
+}
+
