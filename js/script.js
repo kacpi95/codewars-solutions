@@ -714,36 +714,48 @@
 // library.addBook(book2);
 // library.showBooks();
 //    Zadanie 30
-class Movie {
-  constructor(title, director, duration) {
-    this.title = title;
-    this.director = director;
-    this.duration = duration;
+// class Movie {
+//   constructor(title, director, duration) {
+//     this.title = title;
+//     this.director = director;
+//     this.duration = duration;
+//   }
+
+//   getInfo() {
+//     return `Movie: ${this.title}, Director: ${this.director}, Duration: ${this.duration} min`;
+//   }
+// }
+// class Cinema {
+//   constructor() {
+//     this.movies = [];
+//   }
+
+//   addMovie(movie) {
+//     this.movies.push(movie);
+//   }
+
+//   showMovies() {
+//     this.movies.forEach((movie) => console.log(movie.getInfo()));
+//   }
+// }
+
+// const movie1 = new Movie('Inception', 'Christopher Nolan', 148);
+// const movie2 = new Movie('The Hobbit', 'Tolkien', 246);
+
+// const cinema = new Cinema();
+// cinema.addMovie(movie1);
+// cinema.addMovie(movie2);
+
+// cinema.showMovies();
+//    Zadanie 31
+class Animal {
+  constructor(name, species, age) {
+    this.name = name;
+    this.species = species;
+    this.age = age;
   }
 
   getInfo() {
-    return `Movie: ${this.title}, Director: ${this.director}, Duration: ${this.duration} min`;
+    return `Animal: ${this.name}, Species: ${this.species}, Age: ${this.age}`;
   }
 }
-class Cinema {
-  constructor() {
-    this.movies = [];
-  }
-
-  addMovie(movie) {
-    this.movies.push(movie);
-  }
-
-  showMovies() {
-    this.movies.forEach((movie) => console.log(movie.getInfo()));
-  }
-}
-
-const movie1 = new Movie('Inception', 'Christopher Nolan', 148);
-const movie2 = new Movie('The Hobbit', 'Tolkien', 246);
-
-const cinema = new Cinema();
-cinema.addMovie(movie1);
-cinema.addMovie(movie2);
-
-cinema.showMovies();
