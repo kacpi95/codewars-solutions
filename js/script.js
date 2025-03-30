@@ -725,3 +725,25 @@ class Movie {
     return `Movie: ${this.title}, Director: ${this.director}, Duration: ${this.duration} min`;
   }
 }
+class Cinema {
+  constructor() {
+    this.movies = [];
+  }
+
+  addMovie(movie) {
+    this.movies.push(movie);
+  }
+
+  showMovies() {
+    this.movies.forEach((movie) => console.log(movie.getInfo()));
+  }
+}
+
+const movie1 = new Movie('Inception', 'Christopher Nolan', 148);
+const movie2 = new Movie('The Hobbit', 'Tolkien', 246);
+
+const cinema = new Cinema();
+cinema.addMovie(movie1);
+cinema.addMovie(movie2);
+
+cinema.showMovies();
