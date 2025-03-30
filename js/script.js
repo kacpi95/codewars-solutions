@@ -683,34 +683,45 @@
 //   console.log(`Total price for ${product.name}: ${product.getTotalPrice()}`);
 // }
 //    Zadanie 29
-class Book {
-  constructor(title, author, price) {
+// class Book {
+//   constructor(title, author, price) {
+//     this.title = title;
+//     this.author = author;
+//     this.price = price;
+//   }
+//   getInfo() {
+//     return `Book: ${this.title}, by ${this.author}, Price ${this.price}`;
+//   }
+// }
+
+// class Library {
+//   constructor() {
+//     this.books = [];
+//   }
+//   addBook(book) {
+//     this.books.push(book);
+//   }
+//   showBooks() {
+//     for (const book of this.books) {
+//       console.log(book.getInfo());
+//     }
+//   }
+// }
+// const book1 = new Book('The Hobbit', 'J.R.R. Tolkien', 30);
+// const book2 = new Book('The Lord of the Rings', 'J.R.R. Tolkien', 25);
+// const library = new Library();
+// library.addBook(book1);
+// library.addBook(book2);
+// library.showBooks();
+//    Zadanie 30
+class Movie {
+  constructor(title, director, duration) {
     this.title = title;
-    this.author = author;
-    this.price = price;
+    this.director = director;
+    this.duration = duration;
   }
+
   getInfo() {
-    return `Book: ${this.title}, by ${this.author}, Price ${this.price}`;
+    return `Movie: ${this.title}, Director: ${this.director}, Duration: ${this.duration} min`;
   }
 }
-
-
-class Library {
-  constructor() {
-    this.books = [];
-  }
-  addBook(book) {
-    this.books.push(book);
-  }
-  showBooks() {
-    for (const book of this.books) {
-      console.log(book.getInfo());
-    }
-  }
-}
-const book1 = new Book('The Hobbit', 'J.R.R. Tolkien', 30);
-const book2 = new Book('The Lord of the Rings', 'J.R.R. Tolkien', 25);
-const library = new Library();
-library.addBook(book1);
-library.addBook(book2);
-library.showBooks();
