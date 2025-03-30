@@ -759,3 +759,24 @@ class Animal {
     return `Animal: ${this.name}, Species: ${this.species}, Age: ${this.age}`;
   }
 }
+class Zoo {
+  constructor() {
+    this.animals = [];
+  }
+
+  addAnimal(animal) {
+    this.animals.push(animal);
+  }
+
+  showAnimals() {
+    this.animals.forEach((animal) => console.log(animal.getInfo()));
+  }
+}
+const animal1 = new Animal('Zuza', 'Lion', 5);
+const animal2 = new Animal('Elfi', 'Elephant', 8);
+
+const zoo = new Zoo();
+zoo.addAnimal(animal1);
+zoo.addAnimal(animal2);
+
+zoo.showAnimals();
