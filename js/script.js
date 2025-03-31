@@ -748,35 +748,70 @@
 
 // cinema.showMovies();
 //    Zadanie 31
-class Animal {
-  constructor(name, species, age) {
+// class Animal {
+//   constructor(name, species, age) {
+//     this.name = name;
+//     this.species = species;
+//     this.age = age;
+//   }
+
+//   getInfo() {
+//     return `Animal: ${this.name}, Species: ${this.species}, Age: ${this.age}`;
+//   }
+// }
+// class Zoo {
+//   constructor() {
+//     this.animals = [];
+//   }
+
+//   addAnimal(animal) {
+//     this.animals.push(animal);
+//   }
+
+//   showAnimals() {
+//     this.animals.forEach((animal) => console.log(animal.getInfo()));
+//   }
+// }
+// const animal1 = new Animal('Zuza', 'Lion', 5);
+// const animal2 = new Animal('Elfi', 'Elephant', 8);
+
+// const zoo = new Zoo();
+// zoo.addAnimal(animal1);
+// zoo.addAnimal(animal2);
+
+// zoo.showAnimals();
+//    Zadanie 32
+class User {
+  constructor(name, email, age) {
     this.name = name;
-    this.species = species;
+    this.email = email;
     this.age = age;
   }
 
   getInfo() {
-    return `Animal: ${this.name}, Species: ${this.species}, Age: ${this.age}`;
+    return `User: ${this.name}, Email: ${this.email}, Age: ${this.age}`;
   }
 }
-class Zoo {
+
+class Account {
   constructor() {
-    this.animals = [];
+    this.users = [];
   }
 
-  addAnimal(animal) {
-    this.animals.push(animal);
+  register(user) {
+    this.users.push(user);
   }
 
-  showAnimals() {
-    this.animals.forEach((animal) => console.log(animal.getInfo()));
+  showUsers() {
+    this.users.forEach((user) => console.log(user.getInfo()));
   }
 }
-const animal1 = new Animal('Zuza', 'Lion', 5);
-const animal2 = new Animal('Elfi', 'Elephant', 8);
 
-const zoo = new Zoo();
-zoo.addAnimal(animal1);
-zoo.addAnimal(animal2);
+const user1 = new User('Alicja', 'alicja@alicja.com', 25);
+const user2 = new User('Robert', 'robert@robert.com', 30);
 
-zoo.showAnimals();
+const account = new Account();
+account.register(user1);
+account.register(user2);
+
+account.showUsers();
