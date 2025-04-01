@@ -781,37 +781,60 @@
 
 // zoo.showAnimals();
 //    Zadanie 32
-class User {
-  constructor(name, email, age) {
-    this.name = name;
-    this.email = email;
-    this.age = age;
+// class User {
+//   constructor(name, email, age) {
+//     this.name = name;
+//     this.email = email;
+//     this.age = age;
+//   }
+
+//   getInfo() {
+//     return `User: ${this.name}, Email: ${this.email}, Age: ${this.age}`;
+//   }
+// }
+
+// class Account {
+//   constructor() {
+//     this.users = [];
+//   }
+
+//   register(user) {
+//     this.users.push(user);
+//   }
+
+//   showUsers() {
+//     this.users.forEach((user) => console.log(user.getInfo()));
+//   }
+// }
+
+// const user1 = new User('Alicja', 'alicja@alicja.com', 25);
+// const user2 = new User('Robert', 'robert@robert.com', 30);
+
+// const account = new Account();
+// account.register(user1);
+// account.register(user2);
+
+// account.showUsers();
+//    Zadanie 33
+class Account {
+  constructor(owner, balance) {
+    this.owner = owner;
+    this.balance = balance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+  }
+
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+    } else {
+      console.log('Brak funduszy');
+    }
   }
 
   getInfo() {
-    return `User: ${this.name}, Email: ${this.email}, Age: ${this.age}`;
+    return `Właściciel: ${this.owner}, Stan: $${this.balance}`;
   }
 }
-
-class Account {
-  constructor() {
-    this.users = [];
-  }
-
-  register(user) {
-    this.users.push(user);
-  }
-
-  showUsers() {
-    this.users.forEach((user) => console.log(user.getInfo()));
-  }
-}
-
-const user1 = new User('Alicja', 'alicja@alicja.com', 25);
-const user2 = new User('Robert', 'robert@robert.com', 30);
-
-const account = new Account();
-account.register(user1);
-account.register(user2);
-
-account.showUsers();
