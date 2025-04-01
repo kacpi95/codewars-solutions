@@ -838,3 +838,12 @@ class Account {
     return `Właściciel: ${this.owner}, Stan: $${this.balance}`;
   }
 }
+class Bank {
+  constructor() {
+    this.accounts = [];
+  }
+
+  addAccount(account) {
+    this.accounts.push(account);
+  }
+}
