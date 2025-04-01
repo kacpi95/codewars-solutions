@@ -815,58 +815,58 @@
 // account.register(user2);
 
 // account.showUsers();
-//    Zadanie 33
-class Account {
-  constructor(owner, balance) {
-    this.owner = owner;
-    this.balance = balance;
-  }
+// //    Zadanie 33
+// class Account {
+//   constructor(owner, balance) {
+//     this.owner = owner;
+//     this.balance = balance;
+//   }
 
-  deposit(amount) {
-    this.balance += amount;
-  }
+//   deposit(amount) {
+//     this.balance += amount;
+//   }
 
-  withdraw(amount) {
-    if (amount <= this.balance) {
-      this.balance -= amount;
-    } else {
-      console.log('Brak funduszy');
-    }
-  }
+//   withdraw(amount) {
+//     if (amount <= this.balance) {
+//       this.balance -= amount;
+//     } else {
+//       console.log('Brak funduszy');
+//     }
+//   }
 
-  getInfo() {
-    return `Właściciel: ${this.owner}, Stan: $${this.balance}`;
-  }
-}
-class Bank {
-  constructor() {
-    this.accounts = [];
-  }
+//   getInfo() {
+//     return `Właściciel: ${this.owner}, Stan: $${this.balance}`;
+//   }
+// }
+// class Bank {
+//   constructor() {
+//     this.accounts = [];
+//   }
 
-  addAccount(account) {
-    this.accounts.push(account);
-  }
-  transfer(sender, receiver, amount) {
-    const senderAccount = this.accounts.find((acc) => acc.owner === sender);
-    const receiverAccount = this.accounts.find((acc) => acc.owner === receiver);
+//   addAccount(account) {
+//     this.accounts.push(account);
+//   }
+//   transfer(sender, receiver, amount) {
+//     const senderAccount = this.accounts.find((acc) => acc.owner === sender);
+//     const receiverAccount = this.accounts.find((acc) => acc.owner === receiver);
 
-    if (senderAccount && receiverAccount) {
-      senderAccount.withdraw(amount);
-      receiverAccount.deposit(amount);
-      console.log(`Transfer $${amount} z ${sender} do ${receiver}`);
-    } else {
-      console.log('Tanzakcja nie powiodła się ');
-    }
-  }
-}
-const account1 = new Account('Kacper', 500);
-const account2 = new Account('Daria', 300);
+//     if (senderAccount && receiverAccount) {
+//       senderAccount.withdraw(amount);
+//       receiverAccount.deposit(amount);
+//       console.log(`Transfer $${amount} z ${sender} do ${receiver}`);
+//     } else {
+//       console.log('Tanzakcja nie powiodła się ');
+//     }
+//   }
+// }
+// const account1 = new Account('Kacper', 500);
+// const account2 = new Account('Daria', 300);
 
-const bank = new Bank();
-bank.addAccount(account1);
-bank.addAccount(account2);
+// const bank = new Bank();
+// bank.addAccount(account1);
+// bank.addAccount(account2);
 
-bank.transfer('Kacper', 'Daria', 200);
+// bank.transfer('Kacper', 'Daria', 200);
 
-console.log(account1.getInfo());
-console.log(account2.getInfo());
+// console.log(account1.getInfo());
+// console.log(account2.getInfo());
