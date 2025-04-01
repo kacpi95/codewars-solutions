@@ -846,4 +846,27 @@ class Bank {
   addAccount(account) {
     this.accounts.push(account);
   }
+  transfer(sender, receiver, amount) {
+    const senderAccount = this.accounts.find((acc) => acc.owner === sender);
+    const receiverAccount = this.accounts.find((acc) => acc.owner === receiver);
+
+    if (senderAccount && receiverAccount) {
+      senderAccount.withdraw(amount);
+      receiverAccount.deposit(amount);
+      console.log(`Transfer $${amount} z ${sender} do ${receiver}`);
+    } else {
+      console.log('Tanzakcja nie powiodła się ');
+    }
+  }
 }
+const account1 = new Account('Kacper', 500);
+const account2 = new Account('Daria', 300);
+
+const bank = new Bank();
+bank.addAccount(account1);
+bank.addAccount(account2);
+
+bank.transfer('Kacper', 'Daria', 200);
+
+console.log(account1.getInfo());
+console.log(account2.getInfo());
