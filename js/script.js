@@ -870,3 +870,23 @@
 
 // console.log(account1.getInfo());
 // console.log(account2.getInfo());
+
+//    Zadanie 34
+
+function findMax(arr) {
+  if (arr.length === 0) {
+    return undefined;
+  }
+  let max = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  return max;
+}
+
+console.log(findMax([3, 7, 2, 9, 5]));
+console.log(findMax([-1, -5, -3]));
