@@ -893,8 +893,16 @@
 
 //    Zadanie 35
 
-function removeDuplicates(arr) {
-  return [...new Set(arr)];
+// function removeDuplicates(arr) {
+//   return [...new Set(arr)];
+// }
+
+// console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+
+//    Zadanie 36
+
+function reverseArray(arr) {
+  return arr.slice().reverse();
 }
 
-console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+console.log(reverseArray([1, 2, 3, 4]));
