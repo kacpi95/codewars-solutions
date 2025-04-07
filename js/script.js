@@ -909,10 +909,18 @@
 
 //    Zadanie 37
 
-function countOccurrences(arr, value) {
-  return arr.filter((el) => el === value).length;
+// function countOccurrences(arr, value) {
+//   return arr.filter((el) => el === value).length;
+// }
+
+// console.log(
+//   countOccurrences(['jablko', 'banan', 'jablko', 'pomarancz'], 'jablko')
+// );
+
+//    Zadanie 38
+
+function mergeTab(arr1, arr2) {
+  return [...new Set([...arr1, ...arr2])];
 }
 
-console.log(
-  countOccurrences(['jablko', 'banan', 'jablko', 'pomarancz'], 'jablko')
-);
+console.log(mergeTab([1, 2, 3], [3, 4, 5]));
