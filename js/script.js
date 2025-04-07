@@ -873,20 +873,28 @@
 
 //    Zadanie 34
 
-function findMax(arr) {
-  if (arr.length === 0) {
-    return undefined;
-  }
-  let max = arr[0];
+// function findMax(arr) {
+//   if (arr.length === 0) {
+//     return undefined;
+//   }
+//   let max = arr[0];
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
 
-  return max;
+//   return max;
+// }
+
+// console.log(findMax([3, 7, 2, 9, 5]));
+// console.log(findMax([-1, -5, -3]));
+
+//    Zadanie 35
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
 }
 
-console.log(findMax([3, 7, 2, 9, 5]));
-console.log(findMax([-1, -5, -3]));
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
