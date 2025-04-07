@@ -919,8 +919,16 @@
 
 //    Zadanie 38
 
-function mergeTab(arr1, arr2) {
-  return [...new Set([...arr1, ...arr2])];
+// function mergeTab(arr1, arr2) {
+//   return [...new Set([...arr1, ...arr2])];
+// }
+
+// console.log(mergeTab([1, 2, 3], [3, 4, 5]));
+
+//    Zadanie 39
+
+function sort(arr) {
+  return [...arr].sort((a, b) => a - b);
 }
 
-console.log(mergeTab([1, 2, 3], [3, 4, 5]));
+console.log(sort([5, 1, 3, 2, 4]));
