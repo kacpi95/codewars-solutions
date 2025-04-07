@@ -901,8 +901,18 @@
 
 //    Zadanie 36
 
-function reverseArray(arr) {
-  return arr.slice().reverse();
+// function reverseArray(arr) {
+//   return arr.slice().reverse();
+// }
+
+// console.log(reverseArray([1, 2, 3, 4]));
+
+//    Zadanie 37
+
+function countOccurrences(arr, value) {
+  return arr.filter((el) => el === value).length;
 }
 
-console.log(reverseArray([1, 2, 3, 4]));
+console.log(
+  countOccurrences(['jablko', 'banan', 'jablko', 'pomarancz'], 'jablko')
+);
