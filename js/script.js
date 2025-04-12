@@ -927,8 +927,16 @@
 
 //    Zadanie 39
 
-function sort(arr) {
-  return [...arr].sort((a, b) => a - b);
+// function sort(arr) {
+//   return [...arr].sort((a, b) => a - b);
+// }
+
+// console.log(sort([5, 1, 3, 2, 4]));
+
+//    Zadanie 40
+
+function findString(arr) {
+  return arr.find((str) => str.length > 5);
 }
 
-console.log(sort([5, 1, 3, 2, 4]));
+console.log(findString(['czesc', 'dom', 'samochod', 'klawiatura']));
