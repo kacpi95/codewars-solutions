@@ -944,10 +944,17 @@
 
 //    Zadanie 41
 
-function hasNegative(arr) {
-  return arr.some(num => num < 0);
+// function hasNegative(arr) {
+//   return arr.some(num => num < 0);
+// }
+
+
+// console.log(hasNegative([3, -2, 5]));
+// console.log(hasNegative([1, 2, 3]));
+
+//    Zadanie 42
+
+function sort(arr) {
+  return arr.slice().sort((a, b) => a - b);
 }
-
-
-console.log(hasNegative([3, -2, 5]));
-console.log(hasNegative([1, 2, 3]));
+console.log(sort([4, 2, 9, 1]));
