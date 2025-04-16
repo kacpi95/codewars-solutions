@@ -935,8 +935,19 @@
 
 //    Zadanie 40
 
-function findString(arr) {
-  return arr.find((str) => str.length > 5);
+// function findString(arr) {
+//   return arr.find((str) => str.length > 5);
+// }
+
+// console.log(findString(['czesc', 'dom', 'samochod', 'klawiatura']));
+
+
+//    Zadanie 41
+
+function hasNegative(arr) {
+  return arr.some(num => num < 0);
 }
 
-console.log(findString(['czesc', 'dom', 'samochod', 'klawiatura']));
+
+console.log(hasNegative([3, -2, 5]));
+console.log(hasNegative([1, 2, 3]));
