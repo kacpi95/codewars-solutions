@@ -941,20 +941,26 @@
 
 // console.log(findString(['czesc', 'dom', 'samochod', 'klawiatura']));
 
-
 //    Zadanie 41
 
 // function hasNegative(arr) {
 //   return arr.some(num => num < 0);
 // }
 
-
 // console.log(hasNegative([3, -2, 5]));
 // console.log(hasNegative([1, 2, 3]));
 
 //    Zadanie 42
 
-function sort(arr) {
-  return arr.slice().sort((a, b) => a - b);
+// function sort(arr) {
+//   return arr.slice().sort((a, b) => a - b);
+// }
+// console.log(sort([4, 2, 9, 1]));
+
+//    Zadanie 43
+
+function numbers(arr) {
+  return arr.filter((num) => num % 2 === 0);
 }
-console.log(sort([4, 2, 9, 1]));
+
+console.log(numbers([1, 2, 3, 4, 5, 6]));
