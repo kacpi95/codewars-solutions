@@ -959,8 +959,44 @@
 
 //    Zadanie 43
 
-function numbers(arr) {
-  return arr.filter((num) => num % 2 === 0);
+// function numbers(arr) {
+//   return arr.filter((num) => num % 2 === 0);
+// }
+
+// console.log(numbers([1, 2, 3, 4, 5, 6]));
+
+//  Zadanie 44
+
+class Movie {
+  constructor(title, director, duration) {
+    this.title = title;
+    this.director = director;
+    this.duration = duration;
+  }
+
+  getInfo() {
+    return `Movie: ${this.title}, Director: ${this.director}, Duration: ${this.duration} min`;
+  }
+}
+class Cinema {
+  constructor() {
+    this.movies = [];
+  }
+
+  addMovie(movie) {
+    this.movies.push(movie);
+  }
+
+  showMovies() {
+    this.movies.forEach((movie) => console.log(movie.getInfo()));
+  }
 }
 
-console.log(numbers([1, 2, 3, 4, 5, 6]));
+const movie1 = new Movie('Inception', 'Christopher Nolan', 148);
+const movie2 = new Movie('The Hobbit', 'Tolkien', 246);
+
+const cinema = new Cinema();
+cinema.addMovie(movie1);
+cinema.addMovie(movie2);
+
+cinema.showMovies();
