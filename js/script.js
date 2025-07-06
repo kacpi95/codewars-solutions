@@ -967,36 +967,51 @@
 
 //  Zadanie 44
 
-class Movie {
-  constructor(title, director, duration) {
-    this.title = title;
-    this.director = director;
-    this.duration = duration;
-  }
+// class Movie {
+//   constructor(title, director, duration) {
+//     this.title = title;
+//     this.director = director;
+//     this.duration = duration;
+//   }
 
-  getInfo() {
-    return `Movie: ${this.title}, Director: ${this.director}, Duration: ${this.duration} min`;
-  }
-}
-class Cinema {
-  constructor() {
-    this.movies = [];
-  }
+//   getInfo() {
+//     return `Movie: ${this.title}, Director: ${this.director}, Duration: ${this.duration} min`;
+//   }
+// }
+// class Cinema {
+//   constructor() {
+//     this.movies = [];
+//   }
 
-  addMovie(movie) {
-    this.movies.push(movie);
-  }
+//   addMovie(movie) {
+//     this.movies.push(movie);
+//   }
 
-  showMovies() {
-    this.movies.forEach((movie) => console.log(movie.getInfo()));
-  }
-}
+//   showMovies() {
+//     this.movies.forEach((movie) => console.log(movie.getInfo()));
+//   }
+// }
 
-const movie1 = new Movie('Inception', 'Christopher Nolan', 148);
-const movie2 = new Movie('The Hobbit', 'Tolkien', 246);
+// const movie1 = new Movie('Inception', 'Christopher Nolan', 148);
+// const movie2 = new Movie('The Hobbit', 'Tolkien', 246);
 
-const cinema = new Cinema();
-cinema.addMovie(movie1);
-cinema.addMovie(movie2);
+// const cinema = new Cinema();
+// cinema.addMovie(movie1);
+// cinema.addMovie(movie2);
 
-cinema.showMovies();
+// cinema.showMovies();
+
+const arr = [
+  [3, 21, 37],
+  [61, 79, 101, 120],
+  [133, 149],
+];
+const isNumberInArrays = (number, array) => {
+  const result = array.some((el) => el.includes(number));
+  console.log(number, result);
+  return result;
+};
+
+isNumberInArrays(0, arr); // false
+isNumberInArrays(21, arr); // true
+isNumberInArrays(221, arr); // flase
